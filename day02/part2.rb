@@ -9,10 +9,7 @@ powers = input.lines.map do |line|
   end
 
   mins = %w[red green blue].map do |color|
-    foo = sets.map { |set| set[color] }.compact.map(&:to_i).max
-    puts color, foo
-
-    foo
+    sets.map { |set| set[color] }.compact.map(&:to_i).max
   end
 
   mins.inject(&:*)
